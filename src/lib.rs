@@ -213,11 +213,11 @@ impl SemverPubgrub {
 
 impl Display for SemverPubgrub {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        "SemverPubgrub { norml: ".fmt(f)?;
-        self.normal.fmt(f)?;
-        ", pre: ".fmt(f)?;
-        self.pre.fmt(f)?;
-        " } ".fmt(f)
+        write!(f, "{}", self.normal)?;
+        if !self.pre.is_empty() {
+            write!(f, " {}", self.pre)?;
+        }
+        Ok(())
     }
 }
 
