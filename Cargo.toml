@@ -15,7 +15,7 @@ categories = ["algorithms"]
 
 [dependencies]
 semver = "1.0.13"
-pubgrub = { git="https://github.com/pubgrub-rs/pubgrub", branch="dev" }
+pubgrub = { git = 'https://github.com/software-mansion-labs/pubgrub.git', branch = 'dev' }
 serde = { version = "1.0", features = ["derive"], optional = true }
 
 [features]
